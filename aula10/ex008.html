@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição</title>
+</head>
+<body>
+    <h1>Aprendendo Condição em JavaScript</h1>
+    <p>Digite sua idade</p>
+    <input type="number" name="idade" id="idade" title="Digite sua idade">
+    <input type="button" value="Verificar" onclick="verificarIdade()">
+    <p id="status"></p>
+
+    <script>
+        function verificarIdade(){
+            var idade = document.getElementById('idade').valueAsNumber
+            var status = document.getElementById( 'status')
+
+             if (idade >= 18) {
+            status.textContent = 'Maior de idade'
+            } else {
+            status.textContent = 'Menor de idade'
+            }
+        }
+        
+
+    </script>
+    
+</body>
+</html>
