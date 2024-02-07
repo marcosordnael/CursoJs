@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Valores</title>
+    <style>
+        body {
+            font: normal 16pt Arial;
+            background-color: lightslategray;
+            color: white;
+            text-shadow: 2px 2px 4px black;
+            
+        }
+        p {
+            font-weight: bold;
+            
+        }
+        
+        
+        .num {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 60px;
+            height: 80px;
+            width: 200px;
+            text-align: center;
+            
+        }
+        input {
+            font-size: 40px;
+            border: 1px solid black;
+            box-shadow: 2px 2px 5px white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input class="num" type="number" name="txtn1" title="Digite o primeiro número" id="txtn1"> + <input class="num" type="number" name="txtn2" id="txtn2" title="Digite o segundo número">
+    <input type="button" value="Somar" onclick="somar()">
+    <p id="resultado">Resultado</p>
+
+    <script>
+        function somar() {
+            var n1 = document.getElementsByTagName('input')[0]
+            var n2 = document.getElementsByTagName('input')[1]
+            var s = n1.valueAsNumber + n2.valueAsNumber
+            document.getElementById('resultado').textContent =  'Resultado: ' + s;
+
+
+        }
+    </script>
+    
+</body>
+</html>
