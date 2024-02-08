@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição em JavaScrip</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>Em que país você nasceu?</p>
+    <input type="text" name="país" id="país" title="Digite seu país de nascimento" onblur="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)">
+    <input type="button" value="Verificar" onclick="nacionalidade()">
+    <p id="res"></p>
+
+    <script>
+        function nacionalidade(){
+            var nasc = document.getElementById('país').value
+            var res = document.getElementById('res')
+            var nacionalidade
+            
+
+            if (nasc == 'Brasil'){
+                nacionalidade ='Brasileiro'
+            }else {
+                nacionalidade = 'Estrangeiro'
+            }
+            res.innerHTML = `Você nasceu no ${nasc}, portanto você é ${nacionalidade}`
+        }
+    </script>
+
+    
+</body>
+</html>

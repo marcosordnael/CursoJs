@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição Simples em JavaScript</title>
+    <style>
+        body{
+            background-color: yellow;
+            font: normal 18pt Arial}
+        input {
+            padding: 10px;
+            width: 50px;
+            font-size: 18px;
+        }
+        #button {
+            width: auto;
+            margin-left: 10px;
+
+        }
+        #button:hover {
+            background-color: gray;
+            
+        }
+        strong {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    
+    Digite a velocidade do veículo <input type="number" name="vel" id="vel" title="Digite a velocidade do veículo"> Km/h   
+    <input id="button" type="button" value="Analisar" onclick="radar()">
+    
+    <p id="res"></p>
+
+    <script>
+        function radar(){
+
+            var vel = document.getElementById('vel').value
+            var res = document.getElementById('res')
+            
+            res.innerHTML = `<p>A velocidade do seu carro é <strong>${vel} Km/h </strong></p>`
+            if (vel > 60){
+                res.innerHTML += '<p>Você ultrapassou o limite de velocidade permitida e foi <strong>MULTADO!</strong></p>'
+        
+            }else {
+                res.innerHTML += '<p>Dirija sempre usando cinto de segurança!</p>'
+            }
+            
+        }
+        
+    </script>
+
+    
+    
+</body>
+</html>
