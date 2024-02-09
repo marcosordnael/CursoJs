@@ -3,8 +3,10 @@ function carregar(){
     var imagem = document.getElementById('imagem')
     var data = new Date()
     var hora = data.getHours()
-    var min = data.getMinutes()
-    msg.innerHTML = `Agora são ${hora} : ${min}`
+    var min = 1
+    var minutosFormatados = min < 10 ? '0' + min : min; // Adiciona um zero à esquerda se o número de minutos for menor que 10
+    msg.innerHTML = `Agora são ${hora}:${minutosFormatados}`;
+    
 
     if (hora >= 0 && hora < 12) {
         imagem.src = 'imagens/fotomanha.jpg'
