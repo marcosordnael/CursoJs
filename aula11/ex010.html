@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição aninhada em Javascript</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background-image: linear-gradient(to right, rgb(42, 42, 201), rgb(71, 75, 134), rgb(196, 196, 171));
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vota ou não vota</h1>
+    Digite sua idade: <input type="number" name="idade" id="idade" title="Digite sua idade">
+    <input type="button" value="Verificar" onclick="votar()">
+    <p id="resultado"></p>
+
+
+    <script>
+        function votar(){
+            var idade = document.getElementById('idade').value
+            var resultado = document.getElementById('resultado')
+            
+            
+            if (idade < 16){
+                
+                resultado.innerHTML = `Sua idade é ${idade} anos, você não pode votar ainda!`
+
+            } else if (idade < 18 || idade > 65) {
+                
+                resultado.innerHTML = `Sua idade é ${idade} anos, seu voto é facultativo!`
+
+            } else {
+                resultado.innerHTML = `Sua idade é ${idade} anos, seu voto é obrigatório!`
+            }
+        }
+    </script>
+    
+</body>
+</html>

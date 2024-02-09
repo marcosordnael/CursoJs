@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição aninhadas em JavaScript</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, gray , rgb(167, 165, 165), blue);
+            color: white;
+            margin: 30px;
+        }
+        p {
+            font-size: 20px;
+        }
+        input {
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid black;
+            box-shadow: 2px 2px 5px black;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            margin-left: 20px;
+            color: white;
+            background-color: gray;
+
+        }
+        input:hover {
+            
+            transform: scale(1.09); /* Ajuste do tamanho */
+            box-shadow: 0 4px 8px rgb(0, 0, 0); /* Sombra suave */
+            border-radius: 20px; /* Bordas arredondadas */
+            font-weight: bold; /* Texto em negrito */
+            border: 1px white solid;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Que horas são</h1>
+    <p id="horario"></p>
+    <input type="button" value="Horário" onclick="verHora()">
+
+    <script>
+        function verHora(){
+            var agora = new Date
+            var horas = agora.getHours()
+            var min = agora.getMinutes()
+            var horario = document.getElementById('horario')
+        
+            if (horas < 13){
+                horario.innerHTML = `Bom Dia! Agora são exatamente ${horas} horas e ${min} minutos`
+            } else if (horas >= 13 && horas < 19){
+                horario.innerHTML = `Boa Tarde! Agora são exatamente ${horas} horas e ${min} minutos`
+            } else {
+                horario.innerHTML = `Boa Noite! Agora são exatamente ${horas} horas e ${min} minutos`
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
