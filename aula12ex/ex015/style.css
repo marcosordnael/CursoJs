@@ -30,11 +30,12 @@ section {
     padding-top:  20px ;
     text-align: center;
 }
-#foto img {
-    width: 200px; /* Defina a largura desejada */
-    height: auto; /* Mantém a proporção original da imagem */
+input {
+    width: 20px;
 }
-
+input#ano {
+    width: 40px;
+}
 
 
 img {
