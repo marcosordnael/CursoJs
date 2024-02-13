@@ -22,11 +22,19 @@ section {
     margin: auto;
     
 }
-
-#imagem {
-    text-align: center;
-    margin-top: 20px;
+div {
+    padding: 5px;
 }
+
+#contador {
+   letter-spacing: 9px;
+   
+   
+}
+#contagem {
+    display: none;
+}
+
 
 
 footer {
@@ -41,7 +49,4 @@ footer {
         font-size: 12pt; /* Reduz a fonte para telas menores */
     }
     
-    img {
-        max-width: 200px; /* Reduz o tamanho máximo da imagem para telas menores */
-    }
 }
