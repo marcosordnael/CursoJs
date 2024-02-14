@@ -3,29 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qur horas são</title>
+    <title>Super Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Tabuada</h1>
-
     </header>
     <section>
-        <div id="msg">
+
+        <div id="tabuada">
             
-            <p>Número: <input type="number" name="n" id="n"></p>
+            <p>Número: <input type="number" name="num" id="num" title="Número"> <input type="button" value="Gerar" id="gerar" onclick="tabuada()"></p>
 
         </div>
+
         <div id="res">
-            
-            
+
+            <select name="Tabuada" id="seltab" size="10" title="tabuada">
+
+                <option id="msg">
+                    <p >Digite um número acima</p>
+                </option>
+
+            </select>
 
         </div>
+
+
     </section>
+
     <footer>
-        <p>&copy; CursoEmVídeo</p>
+
+        <p>&copy; MarcosordnaeL</p>
+
     </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
