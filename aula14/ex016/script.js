@@ -1,24 +1,46 @@
 function contar() {
     // Recupera os valores dos campos de entrada
-    var inicio = parseInt(document.getElementById('inicio').value);
-    var fim = parseInt(document.getElementById('fim').value);
-    var passo = parseInt(document.getElementById('passo').value);
+    var inicio = parseInt(document.getElementById('txti').value)
+    var fim = parseInt(document.getElementById('txtf').value)
+    var passo = parseInt(document.getElementById('txtp').value)
+
+
     // Seleciona o elemento onde a mensagem será exibida
-    var msg = document.getElementById('msg');
-    // Seleciona o elemento onde a contagem será exibida
-    var contadorParagrafo = document.getElementById('contador');
+    var msg = document.getElementById('res')
+    
 
-    // Mostra a seção de contagem
-    document.getElementById('contagem').style.display = 'block';
 
-    // Atualiza a mensagem para "Contando..."
-    msg.innerHTML = '';
+    
 
     if (isNaN(inicio) || isNaN(fim) || isNaN(passo)) {
-        alert('Por favor, preencha todos os campos corretamente.'); 
-        return;
+        alert('Por favor, preencha todos os campos corretamente.')
+        
+    } else {
+        // Atualiza a mensagem para "Contando..."
+        msg.innerHTML = 'Contando: <br>' 
+        if(passo <= 0){
+            alert('Passo inválido! Digite um passo válido!')
+            msg.innerHTML = 'Preparando a contagem...'
+            return
+            
+        }
+        if (inicio < fim){
+            // contagem crescente
+            for(var c = inicio; c <= fim; c += passo){
+                msg.innerHTML += ` ${c}  👉 `
+            }
+            // Contagem regressiva
+        }else {
+            for(var c = inicio; c >= fim; c-= passo){
+                msg.innerHTML += ` ${c}  👉 `
+            }
+            
+            
+        }
+        msg.innerHTML += `\u{1F3C1}` 
     }
 
+    /*
     if (passo <= 0) {
         msg.innerHTML = 'O passo deve ser maior que zero.';
         return;
@@ -34,5 +56,5 @@ function contar() {
         }
     }
 
-    loop();
+    loop();*/
 }
