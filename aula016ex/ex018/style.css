@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(34, 34, 165);
+    font: normal 15pt Arial;
+    
+    margin: 10;
+    padding: 10px;
+}
+
+
+header {
+    color: white;
+    text-align: center;
+    
+}
+
+section {
+    width: 500px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.63);
+    margin: auto;
+    
+}
+
+select#flista {
+    width: 150px;
+}
+
+
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Mídia query para telas menores, como celulares */
+@media (max-width: 600px) {
+    body {
+        font-size: 12pt; /* Reduz a fonte para telas menores */
+    }
+    
+}
